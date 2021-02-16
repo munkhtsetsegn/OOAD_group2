@@ -1,1 +1,89 @@
 
+package Candys;
+
+import java.util.Random; 
+class candy  
+{ 
+    public String name; 
+    public candy(String name) 
+    { 
+        this.name = name; 
+    }
+    public void setName(String name ){
+        this.name = name;
+    }
+    public String getName(){
+        return this.name;
+    }
+}
+// чөмөгтэй чихэр , бурамтай чихэр , баавгайтай чихэр , самартай чихэр  
+class chumugtei_chiher extends candy{
+     public chumugtei_chiher(String name) 
+    { 
+        super(name); 
+    }
+      public String getName() 
+    { 
+        return super.getName(); 
+    }
+}
+class buramtai_chiher extends candy{
+     public buramtai_chiher(String name) 
+    { 
+        super(name); 
+    }
+      public String getName() 
+    { 
+        return super.getName(); 
+    }
+}
+class baawgaitai_chiher extends candy{
+     public baawgaitai_chiher(String name) 
+    { 
+        super(name); 
+    }
+      public String getName() 
+    { 
+        return super.getName(); 
+    }
+}
+
+class samartai_chiher extends candy{
+     public samartai_chiher(String name) 
+    { 
+        super(name); 
+    }
+      public String getName() 
+    { 
+        return super.getName(); 
+    }
+}
+public class Candy1{
+    public static void main(String []args){
+// чөмөгтэй чихэр 1, бурамтай чихэр 2, баавгайтай чихэр 3, самартай чихэр  4
+        Random rand = new Random();
+        for(int i=0;i<30;i++){
+            switch(rand.nextInt(3)+1){
+                case 1:
+                    chumugtei_chiher candy1 = new chumugtei_chiher("чөмөгтэй чихэр");
+                    System.out.println(candy1.getName());
+                    break;
+                case 2:
+                    buramtai_chiher candy2 = new buramtai_chiher("бурамтай чихэр");
+                    System.out.println(candy2.getName());
+                    break;
+                case 3:
+                    baawgaitai_chiher candy3 = new baawgaitai_chiher("баавгайтай чихэр");
+                    System.out.println(candy3.getName());
+                    break;
+                case 4:
+                    samartai_chiher candy4 = new samartai_chiher("самартай чихэр ");
+                    System.out.println(candy4.getName());
+                    break;
+                
+            }
+        }
+            
+    }
+}
+
