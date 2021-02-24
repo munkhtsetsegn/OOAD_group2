@@ -16,7 +16,7 @@ class drama
         return this.name;
     }
 }
-// Ñ‡Ó©Ð¼Ó©Ð³Ñ‚Ñ�Ð¹ Ñ‡Ð¸Ñ…Ñ�Ñ€ , Ð±ÑƒÑ€Ð°Ð¼Ñ‚Ð°Ð¹ Ñ‡Ð¸Ñ…Ñ�Ñ€ , Ð±Ð°Ð°Ð²Ð³Ð°Ð¹Ñ‚Ð°Ð¹ Ñ‡Ð¸Ñ…Ñ�Ñ€ , Ñ�Ð°Ð¼Ð°Ñ€Ñ‚Ð°Ð¹ Ñ‡Ð¸Ñ…Ñ�Ñ€  
+
 class narnii_vrsad extends drama{
      public narnii_vrsad(String name) 
     { 
@@ -65,19 +65,19 @@ public class dramaa {
         for(int i=0;i<30;i++){
             switch(rand.nextInt(3)+1){
                 case 1:
-                    narnii_vrsad drama1  = new narnii_vrsad("Нарны үр сад драма ");
+                    narnii_vrsad drama1  = new narnii_vrsad("Ð�Ð°Ñ€Ð½Ñ‹ Ò¯Ñ€ Ñ�Ð°Ð´ Ð´Ñ€Ð°Ð¼Ð° ");
                     System.out.println(drama1.getName());
                     break;
                 case 2:
-                    dream_high drama2 = new dream_high ("Мөрөөдлөөсч илүү драма");
+                    dream_high drama2 = new dream_high ("ÐœÓ©Ñ€Ó©Ó©Ð´Ð»Ó©Ó©Ñ�Ñ‡ Ð¸Ð»Ò¯Ò¯ Ð´Ñ€Ð°Ð¼Ð°");
                     System.out.println(drama2.getName());
                     break;
                 case 3:
-                    reply1988  drama3 = new reply1988 (" Дурсамж 1988 драма");
+                    reply1988  drama3 = new reply1988 (" Ð”ÑƒÑ€Ñ�Ð°Ð¼Ð¶ 1988 Ð´Ñ€Ð°Ð¼Ð°");
                     System.out.println(drama3.getName());
                     break;
                 case 4:
-                    true_beauty drama4 = new true_beauty ("Сахиусан тэнгэрийн нууц драма");
+                    true_beauty drama4 = new true_beauty ("Ð¡Ð°Ñ…Ð¸ÑƒÑ�Ð°Ð½ Ñ‚Ñ�Ð½Ð³Ñ�Ñ€Ð¸Ð¹Ð½ Ð½ÑƒÑƒÑ† Ð´Ñ€Ð°Ð¼Ð°");
                     System.out.println(drama4.getName());
                     break;
                 
