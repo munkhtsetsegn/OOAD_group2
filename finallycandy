@@ -1,0 +1,30 @@
+package daalgavar2;
+
+import java.util.Random;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Random rand = new Random();
+        for(int i=1;i<=30;i++){
+            switch(rand.nextInt(3)+1){
+                case 1:
+                	ChumugteiChiher chiher1 = new ChumugteiChiher(i, "chumugtei");
+                	System.out.println(chiher1.showInfo());
+                    break;
+                case 2:
+                	BuramtaiChiher chiher2 = new BuramtaiChiher(i, "buramtai");
+                	System.out.println(chiher2.showInfo());
+                    break;
+                case 3:
+                	BaavgaitaiChiher chiher3 = new BaavgaitaiChiher(i,"baavgaitai");
+                	System.out.println(chiher3.showInfo());
+                    break;
+                case 4:
+                	SamartaiChiher chiher4 = new SamartaiChiher(i,"samartai");
+                	System.out.println(chiher4.showInfo());
+                    break;
+            }
+        }
+	}
+}
