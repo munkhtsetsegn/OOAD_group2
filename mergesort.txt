@@ -1,0 +1,125 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/* нийлүүлэн эрэмбэлэх аргын цааш хуваагдах ёсгүй хэмжээ
+ */
+#define CUTOFF 10
+struct Student {
+	char name[20];
+	int age;
+	float gpa;
+};
+typedef struct Student Student;
+/*
+  a, b хаяганд хадгалагдсан сурагчдыг нэрээр жиших функц
+ */
+int nereer(const Student *a, const Student *b)
+{
+	return strcmp(a->name, b->name) < 0;
+}
+
+/*
+  a, b хаяганд хадгалагдсан сурагчдыг насаар нь жиших функц
+ */
+int nasaar(const Student *a, const Student *b)
+{
+	/* функцийг гүйцээ */
+	return a->age < b->age;
+}
+
+/*
+  a, b хаяганд хадгалагдсан сурагчдыг голчоор  нь жиших функц
+ */
+int golchoor(const Student *a, const Student *b)
+{
+	/* функцийг гүйцээ */
+	return a->gpa < b->gpa;
+}
+
+
+/*
+  Оруулан эрэмбэлэх функц.
+  Жиших үйлдлийг less функцэн заагчийг ашиглан хийнэ.
+ */
+void insertion_sort(Student a[],
+	       int n,
+	       int (*less)(const Student *, const Student *))
+{
+	
+}
+
+/*
+  Нийлүүлсэн эрэмбэлэх аргын mege үйлдэл
+ */
+void merge(Student a[],
+	   Student aux[],
+	   int lo,
+	   int mid,
+	   int hi,
+	   int (*less)(const Student *, const Student *))
+{
+	if (hi-lo <=CUTOFF) {
+        insertion_sort(&a[lo], hi-lo, less;
+        
+}
+
+
+
+void mergesort(Student a[],
+	       Student aux[],
+	       int lo,
+	       int hi,
+	       int (*less)(const Student *, const Student *))
+{
+	if (hi-lo <=CUTOFF) {
+        insertion_sort(&a[lo], hi-lo, less;
+        return;
+	}
+}
+
+int main()
+{
+	FILE *fin = NULL;
+	fin = fopen("info.txt", "r");
+	if (!fin) {
+		printf("info.txt file error!\n");
+		exit(-1);
+	}
+	int i, n;
+	fscanf(fin, "%d", &n);
+	Student *a, *aux;
+	a = (Student *) malloc(sizeof(Student) * n);
+	aux = (Student *) malloc(sizeof(Student) * n);
+	for (i = 0; i < n; i++) {
+		fscanf(fin, "%s%d%f", a[i].name, &a[i].age, &a[i].gpa);
+		aux[i] = a[i];
+	}
+	fclose(fin);
+
+	for (i = 0; i < n; i++)
+		printf("%s %d %f\n", a[i].name, a[i].age, a[i].gpa);
+
+	int t;
+	while (1) {
+		printf("1. Nereer erembelex, 2. Nasaar, 3. Gochoor\n");
+		scanf("%d", &t);
+		switch(t) {
+		case 1:
+			mergesort(a, aux, 0, n - 1, nereer);
+			break;
+		case 2:
+			mergesort(a, aux, 0, n - 1, nasaar);
+			break;
+		case 3:
+			mergesort(a, aux, 0, n - 1, golchoor);
+			break;
+		default:
+			printf("Buruu songolt!");
+			break;
+		}
+		for (i = 0; i < n; i++)
+			printf("%s %d %f\n", a[i].name, a[i].age, a[i].gpa);
+	}
+	return 0;
+}
