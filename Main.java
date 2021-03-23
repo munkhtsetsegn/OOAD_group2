@@ -1,91 +1,41 @@
 
-public class User{
-    public int id;
-    public String fName;
-    public String lName;
-    public int DOB;
-    public String Email;
-    public int Pnumber;
-    public String resigter;
-    public String hotelOrder;
-    
-    User(int id, String fName, String lName, int DOB, String Email
-    int Pnumber, String resigter, String hotelOrder){
-        this.id=id;
-        this.fName=fName;
-        this.lName=lName;
-        this.DOB=DOB;
-        this.Email=Email;
-        this.Pnumber=Pnumber;
-        this.resigter=resigter;
-        this.hotelOrder=hotelOrder;
-    }
-    
-    public static void main(String[] args) {
-    verifyLogin();
-    setName();
-    VerifyPassword();
-  }
+interface uls{
+	public void china();
+	public void russia();
+	public void usa();
 }
 
-
-public class Hotel {
-    public int id;
-    public String name;
-    public String address;
-    public int pnumber;
-    public String roominfo;
-    public String order;
-    
-    Hotel(int id, String name, String address, int pnumber, 
-        String roominfo, String order){
-            this.id=id;
-            this.name=name;
-            this.address=address;
-            this.pnumber=pnumber;
-            this.roominfo=roominfo;
-            this.order=order;
-        }
-    List<User>users;
-    Hotel(){
-        user= new ArrayList<user>()
-    }
-    class Route(){
-        List<Hotel>hotel;
-    }
-    
-    public static void main(String[] args) {
-    totalRent();
-  }
+class Vacc implements uls {
+	String name;
+	int price;
+	int gradus;
+	String rules;
+	
+	Vacc(String name,	int price,	int gradus,	String rules){
+	    this.name=name;
+	    this.price=price;
+	    this.gradus=gradus;
+	    this.rules=rules;
+	}
+	public void print(){
+	    System.out.System.out.println();
+	}
 }
-users.add(new user);
-
-
-public class Route(){
-    public int id;
-    public String name;
-    Route(int id, String name){
-        this.id=id;
+class person{
+    String name;
+    Vacc vacc;
+    public person(String name){
         this.name=name;
     }
+    
+    class Main {
+	  public static void main(String[] args) {
+	    Vacc china = new China("chn" , 50000, 21, "us hurehgu" );
+	    Vacc russia = new rus("rus", 40000, -51, "huuhed bolohgu");
+	    Vacc usa = new us("usa", 30000, 15, "hogshin bolohgu");
+	    person a1 = new hun("bold");
+	    person a2 = new hun("nergui"); 
+	  }
+    }
 }
-
-public class NaturalBeauty(){
-    public int id;
-    public String name; 
-    public String info;
-     NaturalBeauty(int id, String name; String info){
-        this.id=id;
-        this.name=name;
-        this.info=info;
-     }
-     
-     class Route(){
-         List<NaturalBeauty>NB;
-     }
-}
-    
-    
-    
-    
-    
+	 
