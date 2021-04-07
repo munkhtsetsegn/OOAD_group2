@@ -1,0 +1,25 @@
+@startuml
+skinparam classAttributeIconSize 0
+class person {
+ -fname
+ -lname
+ +vaccine_songoh()
+}
+class vaccine_songolt{
+ -name
+ +russia()
+ +china()
+ +usa()
+}
+class vaccine{
+ -name
+ -country
+ -sort
+ -advice
+ +price()
+ +storagetemp()
+}
+person "1*" --o "0..*" vaccine_songolt
+vaccine_songolt "0..1" --* "3" vaccine 
+vaccine "0..*" -- "1..*" person
+@enduml
